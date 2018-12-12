@@ -12,3 +12,112 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.gameGrid{
+
+  border:1px solid black;
+  display: grid;
+  grid-column: 1fr 1fr 1fr;
+  grid-row: 1fr 1fr 1fr;
+  color: red;
+  min-height: 604px;
+  max-height: 604px;
+  min-width: 604px;
+  max-width: 604px;
+}
+
+div{
+
+  width: 200px;
+  height: 200px;
+
+}
+
+.item0{
+  border:1px solid black;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+}
+.item1{
+  border:1px solid black;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.item2{
+  border:1px solid black;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.item3{
+  border:1px solid black;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.item4{
+  border:1px solid black;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.item5{
+  border:1px solid black;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.item6{
+  border:1px solid black;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.item7{
+  border:1px solid black;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.item8{
+  border:1px solid black;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+img{
+    width: 199px;
+    height: 199px;
+}
+
+h1 {
+  position: fixed;
+  color: red;
+  font-size: 90px;
+  animation: blink 1s linear infinite;
+  top: 180px;
+}
+
+.blinking{
+   animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+   0%{     color: red;    }
+   49%{    color: transparent; }
+   50%{    color: transparent; }
+   99%{    color:transparent;  }
+   100%{   color: red;    }
+}
