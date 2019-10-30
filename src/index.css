@@ -14,7 +14,6 @@ code {
 }
 
 .gameGrid{
-
   border:1px solid black;
   display: grid;
   grid-column: 1fr 1fr 1fr;
@@ -24,6 +23,7 @@ code {
   max-height: 604px;
   min-width: 604px;
   max-width: 604px;
+  margin: 10px;
 }
 
 div{
@@ -120,4 +120,11 @@ h1 {
    50%{    color: transparent; }
    99%{    color:transparent;  }
    100%{   color: red;    }
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  margin: 15px;
 }
