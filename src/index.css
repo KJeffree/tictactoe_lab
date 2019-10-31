@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('images/Hogwarts.jpg');
+  /* background-color: blue; */
 }
 
 code {
@@ -98,18 +100,20 @@ div{
   grid-column-end: 4;
 }
 
-img{
+.marker{
     width: 199px;
     height: 199px;
+    margin: 0px;
 }
 
 h1 {
   position: fixed;
-  margin: 25px;
   color: red;
   font-size: 90px;
   animation: blink 1s linear infinite;
-  top: 230px;
+  top: 190px;
+  text-align: center;
+  width: 604px;
 }
 
 .blinking{
@@ -128,4 +132,18 @@ button {
   height: 50px;
   font-size: 20px;
   margin: 15px;
+}
+
+.gameContainer{
+  display: flex;
+}
+
+img {
+  margin: 10px;
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+  width: 600px;
 }

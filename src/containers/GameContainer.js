@@ -13,10 +13,11 @@ class GameContainer extends Component {
     }
     this.handleSquareSelected = this.handleSquareSelected.bind(this);
     this.handleReset = this.handleReset.bind(this)
+    this.allSquaresFilled = this.allSquaresFilled.bind(this);
   }
 
   handleReset() {
-    this.setState({squares: [0, 0, 0, 0, 0, 0, 0, 0, 0], winner: null})
+    this.setState({squares: [0, 0, 0, 0, 0, 0, 0, 0, 0], winner: null, currentMarker:true})
   }
 
   handleSquareSelected(squaresplayed){
@@ -39,6 +40,10 @@ class GameContainer extends Component {
     }
   }
 
+  allSquaresFilled(allSquares){
+    return !allSquares.includes(0);
+  }
+
   checkWinner(allSquares){
     if (allSquares[0] === allSquares[1] && allSquares[1] === allSquares[2] && allSquares[0] !== 0){
       this.setState({winner: allSquares[0]});
@@ -56,6 +61,8 @@ class GameContainer extends Component {
       this.setState({winner: allSquares[2]});
     }else if(allSquares[0] === allSquares[4] && allSquares[4] === allSquares[8] && allSquares[0] !== 0){
       this.setState({winner: allSquares[0]});
+    } else if (this.allSquaresFilled(allSquares)) {
+      this.setState({winner: 0})
     }
 
 
@@ -64,9 +71,9 @@ class GameContainer extends Component {
   render(){
     return(
       <div className="gameContainer">
-        <Winner winner={this.state.winner}/>
         <GameGrid squares={this.state.squares} onSquareSelected={this.handleSquareSelected}/>
         <button onClick={this.handleReset}>Reset</button>
+        <Winner winner={this.state.winner}/>
       </div>
     )
   }

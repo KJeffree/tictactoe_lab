@@ -3,9 +3,9 @@ import React from 'react';
 const Marker = ({value}) => {
 
   if(value == 1){
-    return (<img alt="cross" src="cross.png"/>);
+    return (<img class="marker" alt="HarryPotter" src="HarryPotter.png"/>);
   }else if (value == 2){
-    return (<img alt="circle" src="circle.png"/>);
+    return (<img class="marker" alt="Voldemort" src="Voldemort.png"/>);
   }else{
     return null;
   }
